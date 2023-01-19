@@ -3,7 +3,8 @@ import './App.css';
 import {WebApp} from '@grammyjs/web-app';
 import { useEffect } from 'react';
 import { hooks } from './hooks/hooks';
-import Header from '../header';
+import Header from './components/button/header/header';
+import './components/button/header/header.css';
 
 
 function App() {
