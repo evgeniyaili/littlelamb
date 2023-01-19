@@ -4,7 +4,10 @@ import {WebApp} from '@grammyjs/web-app';
 import { useEffect } from 'react';
 import { hooks } from './hooks/hooks';
 import Header from './components/button/header/header';
-import './components/button/header/header.css';
+import {Route, Routes} from 'react-router-dom';
+import ProductList from './components/button/productList/productList';
+import Form from './components/button/form/form';
+
 
 
 function App() {
@@ -15,8 +18,10 @@ function App() {
     <div className="App">
       <Header/>
       voila
-      <button onClick={onToggleButton}>toggle</button>
-      <button onClick={onClose}>Close</button>
+      <Routes>
+        <Route index element={<ProductList/>}/>
+        <Route path={'form'} element={<Form/>}/>
+      </Routes>
     </div>
   );
 }
