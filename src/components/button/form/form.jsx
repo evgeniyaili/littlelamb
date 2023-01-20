@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { hooks } from '../../../hooks/hooks';
 import './form.css';
 
@@ -7,6 +7,14 @@ const Form = () => {
     const [address, setAddress] = useState('');
     const [gender, setGender] = useState('Man');
     const {tg} = hooks();
+    const onSendData = useCallback(() => {
+    const data = {
+    country,
+    address,
+    gender  
+    }
+    tg.sendData(JSON.stringify(data));
+    }, [country, address, gender])
 
     useEffect(()=> {
         tg.MainButton.setParams({
@@ -20,6 +28,13 @@ const Form = () => {
             tg.MainButton.show();
         }
     }, [country, address])
+
+    useEffect(() => {
+        tg.onEvent('mainButtonClicked', onSendData)
+        return () => {
+            tg.offEvent('mainButtonClicked', onSendData)
+        }
+    }, [onSendData])
 
     const onChangeCountry = (e) => {
         setCountry(e.target.value)
