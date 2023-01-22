@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { hooks } from '../../../hooks/hooks';
 import ProductItem from '../productItem/productItem';
 import './productList.css';
@@ -21,6 +21,27 @@ const getTotalPrice = (items = []) => {
 const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]); // state to save added items (cart)
     const {tg} = hooks();
+
+    const onSendData = useCallback(() => {
+        const data = {
+         products: addedItems,
+         totalPrice: getTotalPrice(addedItems)
+        }
+        fetch:('http://localhost:8000', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+
+            },
+            body: JSON.stringify(data)
+        })
+        }, [])
+    
+        useEffect(()=> {
+            tg.MainButton.setParams({
+                text:'Send data'
+        })
+        }, [])
 
     const onAdd = (product) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id);
