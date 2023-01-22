@@ -20,14 +20,15 @@ const getTotalPrice = (items = []) => {
 
 const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]); // state to save added items (cart)
-    const {tg} = hooks();
+    const {tg, queryId} = hooks();
 
     const onSendData = useCallback(() => {
         const data = {
          products: addedItems,
-         totalPrice: getTotalPrice(addedItems)
+         totalPrice: getTotalPrice(addedItems),
+         queryId
         }
-        fetch:('http://localhost:8000', {
+        fetch:('http://localhost:8080', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

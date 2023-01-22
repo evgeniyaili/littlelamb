@@ -7,7 +7,7 @@ const Form = () => {
     const [address, setAddress] = useState('');
     const [gender, setGender] = useState('Man');
     const {tg} = hooks();
-    
+
     const onSendData = useCallback(() => {
     const data = {
     country,
