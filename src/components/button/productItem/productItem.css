@@ -1,5 +1,4 @@
 .product {
-    display: grid;
     padding: 15px;
     width: 170px;
     border: 1px solid var(--tg-theme-button-color);
