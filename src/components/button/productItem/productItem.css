@@ -2,11 +2,10 @@
     padding: 15px;
     width: 170px;
     border: 1px solid var(--tg-theme-button-color);
-    justify-content: center;
+    
 }
 .img {
     width: 100%;
-    background: lightgray;
     height: 100px;
     margin: 0 auto;
     background: lightpink;
@@ -14,6 +13,15 @@
 .description {
     font-size: 0.8em;
     text-align: center;
+    margin: 10px;
+}
+.title {
+    font: 1em sans-serif;
+    margin: 10px;
+    text-align: center;
+}
+.price {
+    margin-left: 20px;
 }
 .add-btn {
     width: 100%;
