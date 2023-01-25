@@ -9,10 +9,13 @@ const Header = (props) => {
 
     return (
         <div className={'header'}>
-            <Button onClick={onClose}>Close</Button>
+            <div className={'logoContainer'}>
+            <img src="../media/pic1.png" alt="sneaker logo"> </img>
+            </div>
+        {/* <Button onClick={onClose}>Close</Button>
             <span className={'username'}>
                 {user?.username}
-            </span>
+            </span> */}
         </div>
     );
  
