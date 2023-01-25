@@ -3,6 +3,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     max-width: 390px;
+    justify-content: center;
 }
 .item {
     margin-right: 10px;
