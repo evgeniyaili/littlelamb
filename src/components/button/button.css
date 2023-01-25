@@ -1,9 +1,15 @@
 .button {
-    padding: 10px 15px;
+    padding: 10px 20px;
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
     border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
     outline: none;
     cursor: pointer;
-    font-size: medium;
+    transition: background .2s linear;
+}
+.button:hover {
+    background: lightseagreen;
 }
