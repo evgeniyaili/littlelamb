@@ -2,6 +2,7 @@
     padding: 15px;
     width: 170px;
     border: 1px solid var(--tg-theme-button-color);
+    justify-content: center;
 }
 .img {
     width: 100%;
@@ -12,6 +13,7 @@
 }
 .description {
     font-size: 0.8em;
+    text-align: center;
 }
 .add-btn {
     width: 100%;
