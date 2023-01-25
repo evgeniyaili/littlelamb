@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
-
+    background-color: red;
 }
 .username {
     margin-left: auto;
