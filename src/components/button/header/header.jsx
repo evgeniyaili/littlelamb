@@ -10,7 +10,7 @@ const Header = (props) => {
     return (
         <div className={'header'}>
             <div className={'logoContainer'}>
-            <img src="../media/pic1.png" alt="sneaker logo"> </img>
+            <img src="../media/pic1.png" alt="sneaker logo"/>
             </div>
         {/* <Button onClick={onClose}>Close</Button>
             <span className={'username'}>
