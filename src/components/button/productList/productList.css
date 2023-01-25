@@ -1,7 +1,7 @@
 .list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 200px 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     max-width: 390px;
 }
 .item {
